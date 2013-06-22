@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rest for phone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rest for phone is meant as final resting place for your smartphone. Maybe you think it's useless because it is broken... It is not! Second-hand and old phones can foster research in robotics!">
+    <meta name="author" content="Anne van Rossum">
+
+    <!-- Style from DO bots -->
+    <link href="../assets/css/dobots.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 10px;
+        padding-bottom: 60px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="../assets/css/elusive-webfont.css">
+    <!--[if lt IE 7]>
+      <link rel="stylesheet" href="../assets/css/elusive-webfont-ie7.css">
+    <![endif]-->
+
+    <link rel="shortcut icon" href="ico/favicon.ico">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://www.rest4phone.com">Rest for phone</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="details.html">Details</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Submit your idea</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a class="btn" href="http://www.linkedin.com/company/do-distributed-organisms-/"><i class="icon-linkedin"></i></a></li>
+              <li><a class="btn" href="http://www.youtube.com/distributedorganisms"><i class="icon-youtube"></i></a></li>
+              <li><a class="btn" href="http://www.flickr.com/photos/dobots/"><i class="icon-flickr"></i></a></li>
+              <li><a class="btn" href="http://almende.github.io/nets/"><i class="icon-github"></i></a></li>
+              <li><a class="btn" href="http://www.dobots.nl"><i class="icon-home"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Dotty</h1><img src="../assets/img/dotty0.png" alt="The Dotty robot" style="float:right;margin:0 0 15px 15px;"/><br/>
+        <p>The Dotty is a robot developed at Distributed Organisms B.V., or just briefly DO, based in Rotterdam, in the Netherlands, a spinoff in robotics of the not-for-profit research institute Almende. One of the projects of DO is for example <a href="http://www.fireswarm.nl">FireSwarm</a>, finding a dune fire as quick as possible with a group of flying robots. The Dotty has over the time undergone several iterations. The very first prototype you see at the right.</p>
+
+	<br/>
+	<h2>Capabilities</h2>
+	<p>The most important for a robot in our opinion is that it is able to operate "hands-off". It should be able to recharge itself. A lot of educational robots, such as the <a href="http://romotive.com/">Romo 1 and 2</a> or the <a href="http://www.kickstarter.com/projects/arcbotics/sparki-the-easy-robot-for-everyone">Sparki</a> run out of batteries quickly. Not only need batteries be replaced, but it is also harder to come up with interesting applications. The Dotty is special, in that it uses the USB connections of the smartphone to charge itself. We have been experimenting with wireless charging the robot itself. We used our own coils, <a href="http://en.wikipedia.org/wiki/Qi_(inductive_power_standard)">Qi</a>, and <a href="http://en.wikipedia.org/wiki/WiTricity">Witricity</a>. However, we realized then that the battle for wireless standards would quickly make our robot obsolete. Much better it is, to charge the robot through the USB connector on the phone! Currently a lot of phones (e.g. Android 3.1 and up) support USB in host mode (see this post of more than a year old on <a href="http://hackaday.com/2012/02/22/android-3-1-devices-have-usb-host-mode-heres-how-to-use-it/">hackaday.com</a>). We also suddenly realized that by using USB and not Bluetooth between robot and smartphone (as in the printed circuit board picture below), the Bluetooth connection can be used for other things. You can control the Dotty via a smartwatch for example!
+</p>
+
+	<br/>
+	<h2>Kickstarter</h2><img src="../assets/img/pcb.png" alt="PCB for the Dotty" style="float:right;margin:0 0 0 15px;"/>
+	<p>The Dotty is such an interesting concept that it will be worked on by a group of students from industrial design at the Technical University Delft. They will not only completely revamp the look-and-feel of the Dotty, but will also generate all the promotion material that is required to make it a successful Kickstarter project. The microcontroller we use will be Arduino-compatible. Many people should be able to tweak its software. Also the software on the smartphone itself will be open-source. Last, but not least, we will implement methods to actually find the recharging pads with the Dotty.
+	</p>
+
+	<br/>
+	<h2>Technical Specifications</h2>
+	<p>
+	The technical specifications of the Dotty cannot be guaranteed yet, but will be in the following ballpark:</p><p>
+	<ul>
+		<li>Dimensions: 10 cm width, 12 cm length, and 7 cm height</li>
+		<li>Communication method: USB</li>
+		<li>Recharging method: USB</li>
+		<li>Time to recharge: 30 minutes</li>
+		<li>Additional sensors: infrared, battery sensor, motor odometry sensors</li>
+	</ul></p>
+	<p>
+	Feel also free to contact us, if you have nice ideas on the hardware.
+	</p>
+
+	<br/>
+	<h2>Price</h2>
+	<p>
+	We aim for a price for the consumer of around a 100 euros, and will shave off from this price as much as possible. We like groups or networks of robots, so the cheaper the robots become, the better for us!
+	</p>
+
+	<br/>
+	<h2>How broken can my smartphone be?</h2>
+	<p>
+	You can send us your old smartphone when its battery, its USB port, and its processor is still working. The screen can have cracks, or even stay black. If you are not sure if your phone actually still works when its screen stays black: it should show up as USB device when plugged in your computer. In that case we can root it and put applications on it via adb (the Google debugger), no problem! If it is an Android phone, we like to have smartphones of version 3.1 and up. For iPhones, actually only the iPhone 5 can be a USB host device.  
+	</p>
+	<br/>
+        <p><a href="index.html" class="btn btn-primary btn-large">What was the address again? &raquo;</a></p>
+  <p></p>
+      </div>
+
+
+      <hr>
+
+      <footer>
+        <p>&copy; Distributed Organisms B.V. 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery-1.7.2.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

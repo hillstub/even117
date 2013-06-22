@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Dodedodo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dodedodo is a distributed market place">
+    <meta name="author" content="Anne van Rossum">
+
+    <!-- Style from DO bots -->
+    <link href="../assets/css/dobots.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 10px;
+        padding-bottom: 60px;
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="../assets/css/elusive-webfont.css">
+    <!--[if lt IE 7]>
+      <link rel="stylesheet" href="../assets/css/elusive-webfont-ie7.css">
+    <![endif]-->
+
+    <!-- Enable/disable submit button -->
+    <link rel="stylesheet" href="../assets/css/input-help.css">
+
+    <link rel="shortcut icon" href="ico/favicon.ico">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://dodedodo.herokuapp.com">Dodedodo</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <!--
+              <li><a href="details.html">Details</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Submit your idea</a></li>
+              -->
+            </ul>
+            <ul class="nav pull-right">
+              <li><a class="btn" href="http://www.linkedin.com/company/do-distributed-organisms-/"><i class="icon-linkedin"></i></a></li>
+              <li><a class="btn" href="http://www.youtube.com/distributedorganisms"><i class="icon-youtube"></i></a></li>
+              <li><a class="btn" href="http://www.flickr.com/photos/dobots/"><i class="icon-flickr"></i></a></li>
+              <li><a class="btn" href="http://almende.github.io/nets/"><i class="icon-github"></i></a></li>
+              <li><a class="btn" href="http://www.dobots.nl"><i class="icon-home"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main message -->
+      <div class="hero-unit">
+        <h1>Dodedodo</h1><br/>
+        <p>Dodedodo is a distributed market place that allows you to run applications across a wide range of devices. Suppose, you want to use the camera on your Android phone, connect it to face recognition software on the internet, and have your own door opener based on Arduino to finally open the door for you. This is all possible with off-the-shelf software! But setting it up is really hard.</p>
+        <h2>What is this in general?</h2>
+        <p>Dodedodo uses a standard format to describe software modules. These modules can be connected with each other through a graphical user interface. The modules are found through crawling or when people submit their github repository. The modules run on servers online and on your own devices.</p>
+        <div class="span12">
+          <form ng-submit="submit()" ng-controller="EmailCtrl">
+
+             <button type="submit" class="btn btn-primary btn-large"><i class="icon-white icon-envelope"></i> Your github repos</button>
+             <button class="btn btn-primary btn-large" disabled><i class="icon-white icon-envelope"></i> Your github repos</button> 
+
+             <input type="text" class="input-xxlarge" placeholder="https://github.com/yours" ng-model="contact.subject" required>
+
+             <span ng-show="send">
+                <div class="alert alert-success span10">
+                  Thanks! You will definitely hear from us!
+                </div>
+             </span>
+             <span ng-show="failure">
+               <div class="alert alert-error span10">
+                 Sorry, something went wrong in the backend, please send an email! Our sincere apologies!
+               </div>
+             </span>
+          </form>
+        </div>
+        <br/><br/>
+        <h2>What is this exactly?</h2>
+        <p>Dodedodo will feature as a market place hub for applications that have modules that can run on your Raspberry PI, your Android smartphone, your Arduino do-it-yourself chip, your robots, as well as on servers on the internet. It is extremely powerful at one hand:
+          <ul>
+            <li>Automatic generation of glue-code for wide range of middleware: YARP, ROS, ZeroMQ, NodeJS</li>
+            <li>Compiles for many devices: ARM (Android), Blackfin (robots), ARM-HF (Raspberry PI)</li>
+            <li>Allows you to add your own modules</li>
+            <li>Allows deployment on your own server park</li>
+          </ul>
+        </p>
+        <p>It is extremely restricted at the other hand:
+          <ul>
+            <li>The modules themselves are in C++</li>
+          </ul>
+          The code of the module itself is currently in C++. This means that this module will run on every platform that has a C++ compiler, which are many. It does not mean that you cannot use other languages. The NodeJS backend is a good example, where glue code is generated that allows you to use the module from Javascript. However, to use that same module also on a robot, we have to enforce the language of the module itself to be C++.
+        </p>
+        <h2>What does this require from the user?</h2>
+        <p>
+          The user will be able to search for cool schemes that exist out of multiple modules. Those modules have to be dragged to devices the user owns. So, this is slightly more involved than installation of a normal app on a smartphone. On all the devices the user registers there will be a small application that allows modules to be launched, stopped, and connected with other modules. This application is called an AIM agent. The user does not have to worry about firewalls, or anything else, just installing the AIM agent on a Raspberry PI, or an Android smartphone is all.
+        </p>
+      </div>
+
+
+      <hr>
+
+      <footer>
+        <p>&copy; Distributed Organisms B.V. 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery-1.7.2.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/angular.min.js"></script>
+    <script src="../assets/js/contact.js"></script>
+  </body>
+</html>
+
